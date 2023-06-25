@@ -2,9 +2,10 @@ Rails.application.routes.draw do
   post 'auth/login' => 'auth#login'
   get 'auth/auto_login' => 'auth#auto_login'
   get 'auth' => 'auth#check'
-  
+
   get 'users/index' => 'users#index'
   post 'users/create' => 'users#create'
+  post 'users/otp' => 'users#otp'
 
   get 'rooms/index' => 'rooms#index'
   get 'rooms/members/:room_id' => 'rooms#members'

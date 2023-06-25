@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    }
+    @media screen and (min-width: 550px) {
+        .container {
+            width: 550px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+            padding: 25px 18px;
+        }
+    }
+
+    .container {
+        box-sizing: border-box;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        padding: 25px 18px;
+    }
+    .image-container {
+        width: 30%%;
+        display: flex;
+        align-items: center;
+    }
+
+    .img {
+        width: 100%;
+    }
+</style>
+<body>
+    <div class='container'>
+        <div class='image-container'>
+            <img src='/images/logo.png' class='img' />
+        </div>
+    </div>
+</body>
+</html>

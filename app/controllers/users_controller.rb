@@ -4,8 +4,15 @@ class UsersController < ApplicationController
     user_datas = users.map do |user|
       user.attributes.except("email", "password_digest", "created_at", "updated_at")
     end
-    
+
     render status: 200, json: user_datas
+  end
+
+  def otp
+    user = params[:email]
+    OtpMailer.send_otp(user).deliver_later
+
+    render status: 200, json: "send_email"
   end
 
   def create

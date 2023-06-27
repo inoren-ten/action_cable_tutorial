@@ -8,13 +8,6 @@ class UsersController < ApplicationController
     render status: 200, json: user_datas
   end
 
-  def otp
-    user = params[:email]
-    OtpMailer.send_otp(user).deliver_later
-
-    render status: 200, json: "send_email"
-  end
-
   def create
     user = User.new(name: params[:name], email: params[:email], password: params[:password])
 

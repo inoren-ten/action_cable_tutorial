@@ -10,11 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_06_23_063822) do
+ActiveRecord::Schema[7.0].define(version: 2023_06_25_164348) do
   create_table "chats", force: :cascade do |t|
     t.integer "room_id", null: false
     t.integer "user_id", null: false
     t.text "body", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "otps", force: :cascade do |t|
+    t.string "email", null: false
+    t.integer "code", null: false
+    t.datetime "expired_at", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

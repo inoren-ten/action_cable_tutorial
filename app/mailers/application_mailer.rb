@@ -1,4 +1,4 @@
 class ApplicationMailer < ActionMailer::Base
-  default from: email_address_with_name("anisphere.anime@gmail.com", "AniSphere")
+  default from: email_address_with_name("", "")
   layout "mailer"
 end
